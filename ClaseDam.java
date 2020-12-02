@@ -72,4 +72,15 @@ public class ClaseDam {
         }
         System.out.println("Numero de alumnos: " + getNumeroDeAlumnos());
     }
+    
+    /**
+     * imprime una lista de alumnos del curso
+     */
+    public void imprimirListaNumeradaDeAlumnos() {
+        int contador = 1;
+        for (Alumno alumno : alumnos) {
+            System.out.println(contador + ". " + alumno.getDetalles());
+            contador += 1;
+        }
+    }
 }

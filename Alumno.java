@@ -40,7 +40,12 @@ public class Alumno {
      * Imprime por pantalla los detalles del alumno
      */
     public void imprimeDetalles() {
-        System.out.println(nombre + " (" + numeroMatricula + ") - " + edad + " años");
+        System.out.println(getDetalles());
+    }
+    
+    public String getDetalles() {
+        String detalles = nombre + " (" + numeroMatricula + ") - " + edad + " años";
+        return detalles;
     }
     
     /**
@@ -53,15 +58,15 @@ public class Alumno {
         int lengthMatricula = numeroMatricula.length();
         if (lengthNombre <= 2) {
             if (lengthMatricula <=3) {
-                userName = nombre.substring(0, lengthNombre) + numeroMatricula.substring(0, lengthMatricula);
+                userName = nombre + numeroMatricula;
             }
             else {
-                userName = nombre.substring(0, lengthNombre) + numeroMatricula.substring(0, 4);
+                userName = nombre + numeroMatricula.substring(0, 4);
             }
         }
         else {
             if (lengthMatricula <= 3) {
-                userName = nombre.substring(0, 3) + numeroMatricula.substring(0, lengthMatricula);
+                userName = nombre.substring(0, 3) + numeroMatricula;
             }
             else {
                 userName = nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
